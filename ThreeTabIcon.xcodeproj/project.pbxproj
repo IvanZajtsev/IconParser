@@ -13,6 +13,9 @@
 		9D1C713428D5E3530013E087 /* IconCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1C713328D5E3530013E087 /* IconCardView.swift */; };
 		9D1C713628D5E38F0013E087 /* IconCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1C713528D5E38F0013E087 /* IconCardModel.swift */; };
 		9D1C713828D5EABB0013E087 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1C713728D5EABB0013E087 /* ViewModel.swift */; };
+		9D1C713D28D615E40013E087 /* IconsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1C713C28D615E40013E087 /* IconsView.swift */; };
+		9D1C713F28D616090013E087 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1C713E28D616090013E087 /* ContentView.swift */; };
+		9D1C714128D616740013E087 /* IconDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1C714028D616740013E087 /* IconDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		9D1C713328D5E3530013E087 /* IconCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCardView.swift; sourceTree = "<group>"; };
 		9D1C713528D5E38F0013E087 /* IconCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCardModel.swift; sourceTree = "<group>"; };
 		9D1C713728D5EABB0013E087 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		9D1C713C28D615E40013E087 /* IconsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsView.swift; sourceTree = "<group>"; };
+		9D1C713E28D616090013E087 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9D1C714028D616740013E087 /* IconDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 		9D1C712128D5E2510013E087 /* ThreeTabIcon */ = {
 			isa = PBXGroup;
 			children = (
+				9D1C713E28D616090013E087 /* ContentView.swift */,
 				9D1C713128D5E2690013E087 /* App.swift */,
 				9D1C713B28D610E20013E087 /* ViewModel */,
 				9D1C713A28D610DC0013E087 /* View */,
@@ -87,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				9D1C713328D5E3530013E087 /* IconCardView.swift */,
+				9D1C713C28D615E40013E087 /* IconsView.swift */,
+				9D1C714028D616740013E087 /* IconDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,7 +180,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D1C713428D5E3530013E087 /* IconCardView.swift in Sources */,
+				9D1C714128D616740013E087 /* IconDetailView.swift in Sources */,
 				9D1C713628D5E38F0013E087 /* IconCardModel.swift in Sources */,
+				9D1C713F28D616090013E087 /* ContentView.swift in Sources */,
+				9D1C713D28D615E40013E087 /* IconsView.swift in Sources */,
 				9D1C713828D5EABB0013E087 /* ViewModel.swift in Sources */,
 				9D1C713228D5E2690013E087 /* App.swift in Sources */,
 			);
