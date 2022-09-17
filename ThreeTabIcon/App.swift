@@ -5,25 +5,29 @@ struct TestSidebarApp: App {
         WindowGroup {
             ContentView()
         }
-        .commands {
-            SidebarCommands()
-        }
+        // TODO: мб убивающий что-то коммент
+//        .commands {
+//            SidebarCommands()
+//        }
     }
+    
 }
 
 struct ContentView: View {
     @StateObject var iconsData = ViewModel()
     var body: some View {
         NavigationView {
-            Sidebar()
-            Text("No Sidebar Selection")
+//            Sidebar()
+            
+//            Text("No Sidebar Selection")
+            IndoxView()
             Text("No Message Selection")
         }
         .environmentObject(iconsData)
     }
         
 }
-
+/*
 struct Sidebar: View {
     @State private var isDefaultItemActive = true
 
@@ -49,7 +53,7 @@ struct Sidebar: View {
         }
     }
 }
-
+*/
 
 private func toggleSidebar() {
     NSApp.keyWindow?.firstResponder?

@@ -56,13 +56,13 @@
 		9D1C712128D5E2510013E087 /* ThreeTabIcon */ = {
 			isa = PBXGroup;
 			children = (
+				9D1C713128D5E2690013E087 /* App.swift */,
+				9D1C713B28D610E20013E087 /* ViewModel */,
+				9D1C713A28D610DC0013E087 /* View */,
+				9D1C713928D610D00013E087 /* Model */,
 				9D1C712628D5E2520013E087 /* Assets.xcassets */,
 				9D1C712B28D5E2520013E087 /* ThreeTabIcon.entitlements */,
 				9D1C712828D5E2520013E087 /* Preview Content */,
-				9D1C713128D5E2690013E087 /* App.swift */,
-				9D1C713728D5EABB0013E087 /* ViewModel.swift */,
-				9D1C713328D5E3530013E087 /* IconCardView.swift */,
-				9D1C713528D5E38F0013E087 /* IconCardModel.swift */,
 			);
 			path = ThreeTabIcon;
 			sourceTree = "<group>";
@@ -73,6 +73,30 @@
 				9D1C712928D5E2520013E087 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9D1C713928D610D00013E087 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9D1C713528D5E38F0013E087 /* IconCardModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9D1C713A28D610DC0013E087 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9D1C713328D5E3530013E087 /* IconCardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9D1C713B28D610E20013E087 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9D1C713728D5EABB0013E087 /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
