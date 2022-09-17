@@ -17,9 +17,6 @@ struct ContentView: View {
     @StateObject var iconsData = ViewModel()
     var body: some View {
         NavigationView {
-//            Sidebar()
-            
-//            Text("No Sidebar Selection")
             IndoxView()
             Text("No Message Selection")
         }
@@ -27,34 +24,7 @@ struct ContentView: View {
     }
         
 }
-/*
-struct Sidebar: View {
-    @State private var isDefaultItemActive = true
-
-    var body: some View {
-        let list = List {
-            Text("Favorites")
-                .font(.caption)
-                .foregroundColor(.secondary)
-            NavigationLink(destination: IndoxView(), isActive: $isDefaultItemActive) {
-                Label("Inbox", systemImage: "tray.2")
-            }
-            NavigationLink(destination: SentView()) {
-                Label("Sent", systemImage: "paperplane")
-            }
-        }
-        .listStyle(SidebarListStyle())
-
-        
-        list.toolbar {
-            Button(action: toggleSidebar) {
-                Image(systemName: "sidebar.left")
-            }
-        }
-    }
-}
-*/
-
+// TODO: это не вызывается но мб полезно
 private func toggleSidebar() {
     NSApp.keyWindow?.firstResponder?
         .tryToPerform(#selector(NSSplitViewController.toggleSidebar(_:)), with: nil)
@@ -79,8 +49,8 @@ struct IndoxView: View {
         .listStyle(SidebarListStyle())
         .navigationTitle("Inbox")
         .toolbar {
-            Button(action: { /* Open filters */ }) {
-                Image(systemName: "line.horizontal.3.decrease.circle")
+            Button(action: toggleSidebar) {
+                Image(systemName: "sidebar.left")
             }
         }
     }

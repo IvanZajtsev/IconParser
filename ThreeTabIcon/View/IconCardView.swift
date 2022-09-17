@@ -8,7 +8,9 @@ struct IconCardView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 40, height: 40)
+                .background(Color.white)
             Text(iconCard.name)
+            Spacer()
             Button(action: {}, label: {Text(iconCard.inProject ?  "✅":"❌")})
                 
         }
