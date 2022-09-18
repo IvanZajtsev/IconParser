@@ -71,6 +71,7 @@ struct IconDetailView: View {
                     } label: {
                         Text("Compression")
                     }
+                    Text("\(iconCard.inProject ? "✅ In project" : "🟥 Not in project") ")
                 }
                 .listStyle(SidebarListStyle())
                 .ignoresSafeArea(.all, edges: .all)
