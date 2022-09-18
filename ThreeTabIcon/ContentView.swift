@@ -6,8 +6,15 @@ struct ContentView: View {
         NavigationView {
             IconsView()
             Text("No Message Selection")
+            
         }
         .environmentObject(iconsData)
     }
         
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }

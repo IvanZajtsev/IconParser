@@ -16,6 +16,7 @@
 		9D1C713D28D615E40013E087 /* IconsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1C713C28D615E40013E087 /* IconsView.swift */; };
 		9D1C713F28D616090013E087 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1C713E28D616090013E087 /* ContentView.swift */; };
 		9D1C714128D616740013E087 /* IconDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1C714028D616740013E087 /* IconDetailView.swift */; };
+		9D1C714428D7A98F0013E087 /* PathKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9D1C714328D7A98F0013E087 /* PathKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D1C714428D7A98F0013E087 /* PathKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +126,9 @@
 			dependencies = (
 			);
 			name = ThreeTabIcon;
+			packageProductDependencies = (
+				9D1C714328D7A98F0013E087 /* PathKit */,
+			);
 			productName = ThreeTabIcon;
 			productReference = 9D1C711F28D5E2510013E087 /* ThreeTabIcon.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +158,9 @@
 				Base,
 			);
 			mainGroup = 9D1C711628D5E2510013E087;
+			packageReferences = (
+				9D1C714228D7A98F0013E087 /* XCRemoteSwiftPackageReference "PathKit" */,
+			);
 			productRefGroup = 9D1C712028D5E2510013E087 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -386,6 +394,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9D1C714228D7A98F0013E087 /* XCRemoteSwiftPackageReference "PathKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tuist/PathKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9D1C714328D7A98F0013E087 /* PathKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D1C714228D7A98F0013E087 /* XCRemoteSwiftPackageReference "PathKit" */;
+			productName = PathKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9D1C711728D5E2510013E087 /* Project object */;
 }

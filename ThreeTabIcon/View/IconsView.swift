@@ -13,8 +13,7 @@ struct IconsView: View {
                 }
             }
         }
-        .listStyle(SidebarListStyle())
-        .navigationTitle("Inbox")
+        //.listStyle(SidebarListStyle())
         .toolbar {
             Button(action: toggleSidebar) {
                 Image(systemName: "sidebar.left")
