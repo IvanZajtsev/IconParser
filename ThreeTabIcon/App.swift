@@ -5,6 +5,7 @@ struct TestSidebarApp: App {
         WindowGroup {
             ContentView()
         }
+        .windowStyle(HiddenTitleBarWindowStyle())
         // TODO: мб убивающий что-то коммент
 //        .commands {
 //            SidebarCommands()
