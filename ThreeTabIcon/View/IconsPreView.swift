@@ -17,16 +17,16 @@ struct IconsPreView: View {
     var body: some View {
         VStack(spacing: 5) {
             Spacer().frame(height: 60)
-            HStack{
-                Spacer().frame(width: 10)
-                Text(" \(iconCard.name) ")
-                
-                    .font(.system(size: 20)).bold()
-                    .background(Color(.sRGB, white: 0.4, opacity: 1))
-                    .cornerRadius(5)
-                Spacer()
-            }
             VStack {
+                HStack {
+                    Spacer().frame(width: 10)
+                    Text(" \(iconCard.name) ")
+                        .font(.system(size: 20)).bold()
+                        .frame(height: 27)
+                        .background(Color(.sRGB, white: 0.4, opacity: 1))
+                        .cornerRadius(5)
+                    Spacer()
+                }
                 HStack(spacing: 15) {
                     VStack {
                         Image(nsImage: iconCard.nsImage)
@@ -35,7 +35,6 @@ struct IconsPreView: View {
                             .frame(width: 150, height: 150)
                             .cornerRadius(10)
                         Text("1x")
-                        
                     }
                     VStack {
                         Image(nsImage: iconCard.nsImage)
@@ -44,7 +43,6 @@ struct IconsPreView: View {
                             .frame(width: 150, height: 150)
                             .cornerRadius(10)
                         Text("2x")
-                        
                     }
                     VStack {
                         Image(nsImage: iconCard.nsImage)
@@ -66,6 +64,7 @@ struct IconsPreView: View {
             .overlay(
                 RoundedRectangle(cornerRadius: 5)
                     .stroke(Color(.sRGB, white: 1, opacity: 0.15), lineWidth: 1)
+                // TODO: разобраться с pading'aми всеми (вью и рамка вокруг)
                     .padding(.leading, 10)
                     .padding(.trailing, 10)
             )
@@ -73,13 +72,5 @@ struct IconsPreView: View {
         }
         .frame(maxWidth: .infinity)
         .background(Color(.sRGB, white: 0.25, opacity: 1))
-        //
-        
     }
 }
-
-//struct IconsPreView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        IconsPreView()
-//    }
-//}
