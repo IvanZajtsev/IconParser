@@ -4,7 +4,7 @@ struct ContentView: View {
     @StateObject var iconsData = ViewModel()
     var body: some View {
         NavigationView {
-            IconsView()
+            IconsListView()
             Text("No Message Selection")
             
         }

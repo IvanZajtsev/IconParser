@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct IconsOptionsView: View {
-    let iconCard: IconCard
+    @Binding var iconCard: IconCard
     var body: some View {
         VStack(alignment: .center) {
             List {
@@ -44,7 +44,13 @@ struct IconsOptionsView: View {
                         Text("Compression")
                     }.frame(width: 180)
                 }
-                Text("\(iconCard.inProject ? "✅ In project" : "🟥 Not in project") ")
+                HStack {
+                    Button(action: {iconCard.inProject = !iconCard.inProject}, label: {
+                        iconCard.inProject ? Text("❌") : Text("⬇️")
+                    })
+                    Text("\(iconCard.inProject ? "✅ In project" : "🟥 Not in project") ")
+                }
+                
             }
             .listStyle(SidebarListStyle())
             .ignoresSafeArea(.all, edges: .all)

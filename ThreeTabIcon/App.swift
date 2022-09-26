@@ -6,10 +6,6 @@ struct TestSidebarApp: App {
             ContentView()
         }
         .windowStyle(HiddenTitleBarWindowStyle())
-        // TODO: мб убивающий что-то коммент
-//        .commands {
-//            SidebarCommands()
-//        }
     }
 }
 

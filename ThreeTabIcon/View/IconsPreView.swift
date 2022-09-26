@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-enum AssetType {
-    case PNGAsset
-    case SVGAsset
-}
+//enum AssetType {
+//    case PNGAsset
+//    case SVGAsset
+//}
 
 struct IconsPreView: View {
     let iconCard: IconCard
