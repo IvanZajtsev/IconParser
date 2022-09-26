@@ -1,13 +1,13 @@
 import SwiftUI
 
 struct IconDetailView: View {
-    @Binding var iconCard: IconCard
+    @Binding var imageset: Imageset
     var body: some View {
         HStack {
-            IconsPreView(iconCard: iconCard)
+            IconsPreView(imageset: imageset)
             .frame(maxWidth: .infinity)
             
-            IconsOptionsView(iconCard: $iconCard)
+            IconsOptionsView(imageset: $imageset)
             .frame(maxWidth: 300)
             
         }

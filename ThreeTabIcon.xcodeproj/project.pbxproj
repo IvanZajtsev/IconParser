@@ -21,6 +21,7 @@
 		9D1C714828DE3D460013E087 /* Imageset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1C714728DE3D460013E087 /* Imageset.swift */; };
 		9D1C714A28DE48480013E087 /* IconsPreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1C714928DE48480013E087 /* IconsPreView.swift */; };
 		9D1C714C28DF755A0013E087 /* IconsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1C714B28DF755A0013E087 /* IconsLoader.swift */; };
+		9D1C716F28E2494B0013E087 /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1C716E28E2494B0013E087 /* Shell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		9D1C714728DE3D460013E087 /* Imageset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Imageset.swift; sourceTree = "<group>"; };
 		9D1C714928DE48480013E087 /* IconsPreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsPreView.swift; sourceTree = "<group>"; };
 		9D1C714B28DF755A0013E087 /* IconsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsLoader.swift; sourceTree = "<group>"; };
+		9D1C716E28E2494B0013E087 /* Shell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				9D1C712628D5E2520013E087 /* Assets.xcassets */,
 				9D1C712B28D5E2520013E087 /* ThreeTabIcon.entitlements */,
 				9D1C712828D5E2520013E087 /* Preview Content */,
+				9D1C716E28E2494B0013E087 /* Shell.swift */,
 			);
 			path = ThreeTabIcon;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				9D1C713628D5E38F0013E087 /* IconCardModel.swift in Sources */,
 				9D1C713F28D616090013E087 /* ContentView.swift in Sources */,
 				9D1C714628DE3BC30013E087 /* IconsOptionsView.swift in Sources */,
+				9D1C716F28E2494B0013E087 /* Shell.swift in Sources */,
 				9D1C714828DE3D460013E087 /* Imageset.swift in Sources */,
 				9D1C713D28D615E40013E087 /* IconsListView.swift in Sources */,
 				9D1C713828D5EABB0013E087 /* ViewModel.swift in Sources */,

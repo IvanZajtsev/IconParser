@@ -15,6 +15,64 @@ struct IconsLoader {
                                                            inProject: false) }
         return iconsCardsArray
     }
+    
+    static func loadImagesets()  -> [Imageset] {
+        
+        let assetsPath: PathKit.Path = Path("/Users/vanzay/Development/Assets.xcassets")
+        let imagesetsPathArray = try! assetsPath.children().filter({ $0.extension == "imageset" })
+        var imagesetsArray: [Imageset] = []
+        for path in imagesetsPathArray {
+            let assetType: AssetType
+            let iconsPaths = try! path.children()
+            // TODO: переделать развилку на свг и пнг тип: надо не отрицание отдного на другое, а четкий поиск svg в папке и пнг в папке и ошибку если кто-то лишний
+            if iconsPaths.filter({ $0.extension == "svg" }).isEmpty {
+                assetType = .pngAsset
+            } else {
+                assetType = .svgAsset
+            }
+            let imageset: Imageset
+            switch assetType {
+            case .pngAsset:
+                //TODO: блять на гитлабе другая структураааа там 5 размеров не подписанных
+                let image1xPath = iconsPaths.filter({ $0.lastComponentWithoutExtension.contains("@1x") }).first
+                let image2xPath = iconsPaths.filter({ $0.lastComponentWithoutExtension.contains("@2x") }).first
+                let image3xPath = iconsPaths.filter({ $0.lastComponentWithoutExtension.contains("@3x") }).first
+                
+                // TODO: по дефолту для проверки повесить НЕ пустое изобраджение
+                let image1x = image1xPath != nil ? NSImage(data: try! Data(contentsOf: URL(fileURLWithPath: image1xPath!.string)))! : NSImage()
+                let image2x = image2xPath != nil ? NSImage(data: try! Data(contentsOf: URL(fileURLWithPath: image2xPath!.string)))! : NSImage()
+                let image3x = image3xPath != nil ? NSImage(data: try! Data(contentsOf: URL(fileURLWithPath: image3xPath!.string)))! : NSImage()
+
+                
+                imageset = Imageset(name: path.lastComponentWithoutExtension,
+                                    image: image1x,
+                                    image2x: image2x,
+                                    image3x: image3x,
+                                    inProject: false,
+                                    assetType: .pngAsset)
+            case .svgAsset:
+                let imagePath = iconsPaths.filter({ $0.extension == "svg" }).first
+                if let imagePath = imagePath {
+                    // svg2png -w 72 -h 72 \(imagePath) \(imagePath.string.dropLast(3) + "png")
+                    let output = ShellManager.shell("svg2png -w 72 -h 72 \(imagePath) \(imagePath.string.dropLast(3) + "png")")
+                    print(output)
+                }
+                let helperPngPath = iconsPaths.filter({ $0.extension == "png" }).first
+                let image = imagePath != nil ? NSImage(data: try! Data(contentsOf: URL(fileURLWithPath: helperPngPath!.string)))! : NSImage()
+                imageset = Imageset(name: path.lastComponentWithoutExtension,
+                                    image: image,
+                                    image2x: nil,
+                                    image3x: nil,
+                                    inProject: false,
+                                    assetType: .svgAsset)
+            }
+            
+            imagesetsArray.append(imageset)
+        }
+        
+        
+        return imagesetsArray
+    }
 }
 
 

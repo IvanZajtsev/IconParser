@@ -1,21 +1,21 @@
 import SwiftUI
 
 struct IconCardView: View {
-    @Binding var iconCard: IconCard
+    @Binding var imageset: Imageset
     var body: some View {
         HStack {
-            Image(nsImage: iconCard.nsImage)
+            Image(nsImage: imageset.image)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 60, height: 60)
                 .background(Color.white)
                 .cornerRadius(5)
-            Text(iconCard.name)
+            Text(imageset.name)
             Spacer()
-            Button(action: {iconCard.inProject = !iconCard.inProject}, label: {
-                Image(systemName: iconCard.inProject ? "checkmark.square" : "square")
+            Button(action: {imageset.inProject = !imageset.inProject}, label: {
+                Image(systemName: imageset.inProject ? "checkmark.square" : "square")
                     .font(.system(size: 36))
-                    .foregroundColor(iconCard.inProject ? .green : .red)
+                    .foregroundColor(imageset.inProject ? .green : .red)
                     
                 
             })

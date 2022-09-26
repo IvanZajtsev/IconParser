@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct IconsOptionsView: View {
-    @Binding var iconCard: IconCard
+    @Binding var imageset: Imageset
     var body: some View {
         VStack(alignment: .center) {
             List {
@@ -10,26 +10,34 @@ struct IconsOptionsView: View {
                     Text("Render as")
                         
                     Menu {
-                        Button (action: {}, label: {
+                        Button (action: {
+                            imageset.contentsJson.renderAs =  "Default"
+                            
+                        }, label: {
                             Text("Default")
                         })
-                        Button (action: {}, label: {
+                        Button (action: {
+                            imageset.contentsJson.renderAs =  "Original"
+                        }, label: {
                             Text("Original Image")
                         })
-                        Button (action: {}, label: {
+                        Button (action: {
+                            imageset.contentsJson.renderAs =  "Template"
+                        }, label: {
                             Text("Template Image")
                         })
                     } label: {
-                        Text("Default")
+                        Text(imageset.contentsJson.renderAs)
                             
                     }.frame(width: 180)
+                        .id(UUID())
                 }
                 HStack {
                     Spacer()
                     Text("Compression")
                     Menu {
                         Button {
-                            //style = 0
+                            
                         } label: {
                             Text("Linear")
                             Image(systemName: "arrow.down.right.circle")
@@ -43,12 +51,13 @@ struct IconsOptionsView: View {
                     } label: {
                         Text("Compression")
                     }.frame(width: 180)
+                        .id(UUID())
                 }
                 HStack {
-                    Button(action: {iconCard.inProject = !iconCard.inProject}, label: {
-                        iconCard.inProject ? Text("❌") : Text("⬇️")
+                    Button(action: {imageset.inProject = !imageset.inProject}, label: {
+                        imageset.inProject ? Text("❌") : Text("⬇️")
                     })
-                    Text("\(iconCard.inProject ? "✅ In project" : "🟥 Not in project") ")
+                    Text("\(imageset.inProject ? "✅ In project" : "🟥 Not in project") ")
                 }
                 
             }

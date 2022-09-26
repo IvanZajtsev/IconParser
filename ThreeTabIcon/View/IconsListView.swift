@@ -4,12 +4,12 @@ struct IconsListView: View {
     @EnvironmentObject var iconsData: ViewModel
     var body: some View {
         List(selection: $iconsData.selectedRecentIcon) {
-            ForEach($iconsData.icons) { iconCard in
+            ForEach($iconsData.icons) { imageset in
                 NavigationLink(destination:
-                                IconDetailView(iconCard: iconCard)
+                                IconDetailView(imageset: imageset)
                                
                 ) {
-                    IconCardView(iconCard: iconCard)
+                    IconCardView(imageset: imageset)
                 }
             }
         }
