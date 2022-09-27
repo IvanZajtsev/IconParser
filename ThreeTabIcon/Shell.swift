@@ -6,12 +6,13 @@ class ShellManager {
         
         task.standardOutput = pipe
         task.standardError = pipe
-        task.arguments = [command]
+        task.arguments = ["-c", command]
         task.launchPath = "bin/zsh"
         task.standardInput = nil
         task.launch()
         
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
+        pipe.fileHandleForReading.closeFile()
         let output = String(data: data, encoding: .utf8)!
         
         return output
